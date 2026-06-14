@@ -314,7 +314,7 @@ fun StudentResultsScreen(
                         )
                     }
                 )
-                HorizontalDivider()
+                Divider()
             }
         }
     }

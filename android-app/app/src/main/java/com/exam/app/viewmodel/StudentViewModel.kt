@@ -151,6 +151,10 @@ class StudentViewModel @Inject constructor(
         }
     }
 
+    suspend fun getAttemptResult(attemptId: Long): Result<AttemptResultDto> {
+        return studentRepository.getAttemptResult(attemptId)
+    }
+
     sealed interface SubmissionState {
         object Idle : SubmissionState
         object Submitting : SubmissionState

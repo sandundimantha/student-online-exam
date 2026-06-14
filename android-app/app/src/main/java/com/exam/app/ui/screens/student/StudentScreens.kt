@@ -19,6 +19,7 @@ import androidx.navigation.NavController
 import com.exam.app.ui.navigation.Screen
 import com.exam.app.viewmodel.AuthViewModel
 import com.exam.app.viewmodel.StudentViewModel
+import com.exam.app.data.remote.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -100,7 +101,7 @@ fun StudentDashboardScreen(
                         }
                     }
                 )
-                HorizontalDivider()
+                Divider()
             }
         }
     }

@@ -102,7 +102,7 @@ fun AdminDashboardScreen(
                                 supportingContent = { Text(act.message) },
                                 trailingContent = { Text(act.timeAgo, style = MaterialTheme.typography.bodySmall) }
                             )
-                            HorizontalDivider()
+                            Divider()
                         }
                     }
                 }
@@ -172,7 +172,7 @@ fun UserManagementScreen(
                             }
                         }
                     )
-                    HorizontalDivider()
+                    Divider()
                 }
             }
         }
@@ -217,7 +217,7 @@ fun SubjectManagementScreen(
                             }
                         }
                     )
-                    HorizontalDivider()
+                    Divider()
                 }
             }
         }

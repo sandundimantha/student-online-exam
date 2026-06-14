@@ -313,13 +313,3 @@ fun ForgotPasswordScreen(
     }
 }
 
-// Simple state flow helper functions
-@Composable
-fun rememberMutableStateFlow(initial: String): MutableStateFlow<String> {
-    return remember { MutableStateFlow(initial) }
-}
-
-@Suppress("NOTHING_TO_INLINE")
-inline fun <T> rememberStateOf(initialValue: T): MutableState<T> = remember { mutableStateOf(initialValue) }
-
-inline fun <T> mutableStateFlowOf(initialValue: T): MutableState<T> = mutableStateOf(initialValue)
