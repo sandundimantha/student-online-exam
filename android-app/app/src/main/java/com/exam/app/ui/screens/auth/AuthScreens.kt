@@ -4,6 +4,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
@@ -20,8 +22,8 @@ fun LoginScreen(
     navController: NavController,
     viewModel: AuthViewModel = hiltViewModel()
 ) {
-    var email by remember { mutableStateFlowOf("") }
-    var password by remember { mutableStateFlowOf("") }
+    var email by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
     val authState by viewModel.authState.collectAsState()
 
     LaunchedEffect(authState) {
@@ -117,11 +119,11 @@ fun RegisterScreen(
     navController: NavController,
     viewModel: AuthViewModel = hiltViewModel()
 ) {
-    var fullName by remember { mutableStateFlowOf("") }
-    var email by remember { mutableStateFlowOf("") }
-    var password by remember { mutableStateFlowOf("") }
-    var selectedRole by remember { mutableStateFlowOf("STUDENT") }
-    var expanded by remember { mutableStateFlowOf(false) }
+    var fullName by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
+    var selectedRole by remember { mutableStateOf("STUDENT") }
+    var expanded by remember { mutableStateOf(false) }
 
     val authState by viewModel.authState.collectAsState()
 
@@ -247,7 +249,7 @@ fun ForgotPasswordScreen(
     navController: NavController,
     viewModel: AuthViewModel = hiltViewModel()
 ) {
-    var email by remember { mutableStateFlowOf("") }
+    var email by remember { mutableStateOf("") }
     val authState by viewModel.authState.collectAsState()
 
     Scaffold(
