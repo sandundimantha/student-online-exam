@@ -221,7 +221,7 @@ export const QuestionBankBuilder: React.FC = () => {
     setLoading(true);
     try {
       await api.post('api/lecturer/questions', {
-        subjectId: 1L, // Defaults to first subject
+        subjectId: 1, // Defaults to first subject
         questionText: text,
         questionType: type,
         optionA: type === 'MCQ' ? optionA : null,

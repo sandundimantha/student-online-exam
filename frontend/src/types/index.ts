@@ -1,5 +1,4 @@
 export type Role = 'ADMIN' | 'LECTURER' | 'STUDENT';
-import { Status } from '../types';
 
 export interface User {
   id: number;
